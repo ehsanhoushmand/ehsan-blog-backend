@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CinemaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +16,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('30nama', [CinemaController::class, 'getSiteUrl']);
 Route::get('/quote', function () {
 	$quotes = [
 		'نفسم شاید دلیل زنده بودنم باشد
